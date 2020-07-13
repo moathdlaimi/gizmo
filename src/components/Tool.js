@@ -14,10 +14,12 @@ class Tool extends React.Component {
 
   render () {
     const {tool,index,deleteTool,updateTool,updateTitle,updateImg,updateDescription,updatePrice,updateTag} = this.props
+    console.log(tool);
     return (
+
       <div>
         <h3>This is the Tool Component</h3>
-        <h3>{tool}</h3>
+        <h3>{tool.title}</h3>
         <button onClick={this.toggleShow}>Edit Tool</button>
         <button value={tool} onClick={deleteTool}>Delete Tool</button>
         { this.state.show ?
@@ -32,6 +34,7 @@ class Tool extends React.Component {
           </form>
         </div>: null }
       </div>
+
     )
   }
 }
