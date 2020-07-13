@@ -11,7 +11,7 @@ class Home extends React.Component {
         <div>
         {tools.map(
           (tool) => {
-            return <h1>{tool.title}</h1>
+            return <h1>{tool.title} || Price/Day ${tool.price}</h1>
         })}
         </div>
       </div>

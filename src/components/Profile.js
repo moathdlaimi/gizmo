@@ -8,12 +8,19 @@ class Profile extends React.Component {
   // STATE
   // ==============
   state = {
-    show:false
+    showEdit:false,
+    showNew:false
   }
 
-  toggleShow = () => {
+  toggleShowEdit = () => {
     this.setState({
-        show:!this.state.show
+        showEdit:!this.state.showEdit
+    })
+  }
+
+  toggleShowNew = () => {
+    this.setState({
+        showNew:!this.state.showNew
     })
   }
 
@@ -30,10 +37,10 @@ class Profile extends React.Component {
           (tool) => {
             return (
               <>
-              <h1>{tool.title} || Price/Day ${tool.price}</h1>
-              <button onClick={this.toggleShow}>Edit Tool</button>
+              <h1>{tool.title}</h1>
+              <button onClick={this.toggleShowEdit}>Edit Tool</button>
               <button value={tool.id} onClick={deleteTool}>Delete Tool</button>
-              { this.state.show ?
+              { this.state.showEdit ?
               <div>
                 <form id={tool.id} onSubmit={updateTool}>
                   <input onKeyUp={updateTitle} type="text" placeholder="Title" required/><br/>
@@ -48,7 +55,9 @@ class Profile extends React.Component {
             )
 
         })}
-
+        <br/>
+        <button onClick={this.toggleShowNew}>Add new Tool</button>
+        { this.state.showNew ?
         <div className="create-form-div">
           <form className="create-form" onSubmit={createTool}>
             <input className="create-input" onKeyUp={createTitle} type="text" placeholder="Title" required/><br/>
@@ -58,7 +67,7 @@ class Profile extends React.Component {
             <input className="create-input" onKeyUp={createTags} type="text" placeholder="Tags" required/><br/>
             <input className="create-submit" type="submit" value="Post New Tool"/>
           </form>
-        </div>
+        </div> : null}
         </div>
       )
     }
