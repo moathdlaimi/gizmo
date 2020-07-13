@@ -4,10 +4,16 @@ import Profile from './Profile.js'
 
 class Home extends React.Component {
   render () {
+    const {tools} = this.props
     return (
       <div>
-        <h1>Hello</h1>
-        
+        <h1>All Tools</h1>
+        <div>
+        {tools.map(
+          (tool) => {
+            return <h1>{tool.title}</h1>
+        })}
+        </div>
       </div>
     )
   }
