@@ -12,7 +12,11 @@
 }
 
 .tool{
-  width: 100%;
+  transition: 1s;
+}
+.tool:hover{
+  transition: 1s;
+  transform: translate(5px,0);
 }
 
 .tool-img{

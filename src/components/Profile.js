@@ -33,10 +33,12 @@ class Profile extends React.Component {
       return (
         <div>
         <h1>Your Tools</h1>
-        {tools.map(
+        {
+          tools.map(
           (tool) => {
             return (
-              <>
+              <div className="profile-tool">
+              <img className="tool-img" src={tool.img}/>
               <h1>{tool.title}</h1>
               <button onClick={this.toggleShowEdit}>Edit Tool</button>
               <button value={tool.id} onClick={deleteTool}>Delete Tool</button>
@@ -51,10 +53,11 @@ class Profile extends React.Component {
                   <input type="submit" value="Update Tool"/>
                 </form>
               </div>: null }
-              </>
+              </div>
             )
 
-        })}
+        })
+      }
         <br/>
         <button onClick={this.toggleShowNew}>Add new Tool</button>
         { this.state.showNew ?
