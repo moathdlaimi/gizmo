@@ -149,7 +149,7 @@ updateTag = (event) => {
         return (
 
             <div className="container">
-            <h1>Gizmo</h1>
+            <h1 className="app-name">Gizmo</h1>
             <Router>
             <Navigation/>
               <Switch>

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/Home.css'
 import Tool from './Tool.js'
 import Profile from './Profile.js'
 
@@ -7,11 +8,16 @@ class Home extends React.Component {
     const {tools} = this.props
     return (
       <div>
-        <h1>All Tools</h1>
-        <div>
+        <div className="tools-container">
         {tools.map(
           (tool) => {
-            return <h1>{tool.title} || Price/Day ${tool.price}</h1>
+            return <div className="tool">
+            <img className="tool-img" src={tool.img}/>
+            <div className="tool-info">
+            <h1>{tool.title}</h1>
+            <h4>Price/Day ${tool.price}</h4>
+            </div>
+            </div>
         })}
         </div>
       </div>

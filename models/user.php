@@ -6,10 +6,12 @@ class User {
   public $name;
   public $password;
 
-  public function __construct($id, $title, $img, $description, $price, $tags) {
+
+  public function __construct($id, $name, $password) {
     $this->id = $id;
     $this->name = $name;
     $this->password = $password;
+
   }
 }
 
@@ -25,6 +27,7 @@ class Users {
         intval($row_object->id),
         $row_object->name,
         $row_object->password,
+
       );
       $users[] = $new_user;
       $row_object = pg_fetch_object($results);

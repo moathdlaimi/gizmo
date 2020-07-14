@@ -5,7 +5,7 @@
 }
 
 .container {
-  
+
 }
 
 .nav-bar{
@@ -16,6 +16,11 @@
 .main{
   margin: 50px;
 
+}
+
+.app-name {
+  font-size: 3em;
+  color: #992e2e;
 }
 
 
