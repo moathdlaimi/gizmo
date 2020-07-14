@@ -14,7 +14,7 @@ class Home extends React.Component {
             return <div className="tool">
             <img className="tool-img" src={tool.img}/>
             <div className="tool-info">
-            <h1>{tool.title}</h1>
+            <h1><a href="./Profile">{tool.title}</a></h1>
             <h4>Price/Day ${tool.price}</h4>
             </div>
             </div>

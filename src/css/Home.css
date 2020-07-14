@@ -24,7 +24,13 @@
 
 }
 
-
+a{
+  text-decoration:none;
+  color: black;
+}
+a:hover{
+  color: green;
+}
 
 @media only screen and (max-width: 650px) {
   .tools-container{
