@@ -6,25 +6,27 @@ import {Link} from 'react-router-dom'
 
 class Navigataion extends React.Component {
   state = {
-    username:''
+    user:'',
   }
 
   componentDidMount = () => {
       axios.get('/sessions').then(
         (response) => {
+          console.log(response.data);
           this.setState({
-            username: response.data.username
+            user: response.data
           })
         }
       )
 
-
   }
+
+
   render () {
 
     return (
       <>
-      { this.state.username === '' ?
+      { this.state.user == null ?
       <nav className="nav-bar">
 
         <Link to="/" className="nav-links">Home </Link >

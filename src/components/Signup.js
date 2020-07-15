@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import '../css/Signup.css'
+import Navigation from '../components/Navigation.js'
 
 class Signup extends React.Component {
   state = {
@@ -41,7 +42,10 @@ class Signup extends React.Component {
 
   render () {
     return (
+      <div>
+      <Navigation />
       <div className="signup-div">
+
         <h1>Signup</h1>
           <form onSubmit={this.createUser} className="signup-form">
             <input className="signup-input" onKeyUp={this.createName} type="text" placeholder="Username" required/><br/>
@@ -49,7 +53,7 @@ class Signup extends React.Component {
             <input className="signup-submit-btn" type="submit" value="Create New User"/>
           </form>
       </div>
-
+      </div>
     )
   }
 }

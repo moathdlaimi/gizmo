@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import '../css/Profile.css'
+import Navigation from '../components/Navigation.js'
 
 
 class Profile extends React.Component {
@@ -164,6 +165,7 @@ updateTag = (event) => {
 
       return (
         <div>
+        <Navigation />
         <h1>Your Tools</h1>
         <button onClick={this.logout}>Log Out</button>
         {

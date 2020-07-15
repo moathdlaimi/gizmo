@@ -31,6 +31,9 @@ RewriteRule ^users$ controllers/users.php?action=post
 
 # ======= Sessions =======
 
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteRule ^sessions$ controllers/sessions.php?action=index
+
 RewriteCond %{REQUEST_METHOD} ^POST$
 RewriteRule ^sessions$ controllers/sessions.php?action=post
 
