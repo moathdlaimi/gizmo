@@ -5,7 +5,6 @@ class Login extends React.Component {
   state = {
     username:'',
     password:'',
-    loggedIn:''
   }
 
   createSession = (event) => {

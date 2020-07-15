@@ -32,7 +32,7 @@ class App extends React.Component {
       axios.get('/sessions').then(
         (response) => {
           this.setState({
-            loggedIn:response.data
+            loggedIn:response.data.name
           })
         }
       )

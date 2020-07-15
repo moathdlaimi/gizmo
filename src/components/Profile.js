@@ -37,9 +37,7 @@ class Profile extends React.Component {
   logout = () => {
       axios.delete('/sessions').then(
         (response) => {
-          this.setState({
-
-          })
+              this.props.history.push('/');
         }
       )
   }
