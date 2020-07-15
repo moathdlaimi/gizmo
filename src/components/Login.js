@@ -21,6 +21,7 @@ class Login extends React.Component {
         if (response.data === '') {
             alert('Username or password wrong')
         } else {
+          alert('Welcome ' + this.state.username)
           this.props.history.push('/profile');
         }
       }

@@ -47,7 +47,24 @@ $dbconn = pg_connect("host=localhost dbname=gizmo");
       }
     //to show each user with thier own tools
       static function allFromUser($username){
-        $results = pg_query("SELECT * FROM tools WHERE ");
+        $user_tools = array();
+        $results = pg_query("SELECT * FROM tools JOIN users ON tools.rentee = users.name");
+
+        $row_object = pg_fetch_object($results);
+        while($row_object){
+          $new_tool = new Tool(
+            intval($row_object->id),
+            $row_object->title,
+            $row_object->img,
+            $row_object->description,
+            $row_object->price,
+            $row_object->tags,
+            $row_object->rentee,
+          );
+          $user_tools[] = $new_tool;
+          $row_object = pg_fetch_object($results);
+        }
+        return $user_tools;
       }
 
       //

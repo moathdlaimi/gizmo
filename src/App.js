@@ -16,44 +16,18 @@ import Navigation from './components/Navigation.js'
 // =============================
 class App extends React.Component {
 
-  state = {
-      tools:[],
-      loggedIn:''
-  }
-
-  componentDidMount = () => {
-      axios.get('/tools').then(
-        (response) => {
-          this.setState({
-              tools:response.data
-          })
-        }
-      )
-      axios.get('/sessions').then(
-        (response) => {
-          this.setState({
-            loggedIn:response.data.name
-          })
-        }
-      )
-
-
-  }
-
     render(){
         return (
 
             <div className="container">
             <h1 className="app-name">Gizmo</h1>
             <Router>
-            <Navigation loggedIn={this.state.loggedIn}/>
+            <Navigation/>
               <Switch>
                 <Route path="/" exact component={Home}/>
                 <Route path="/profile" component={Profile}/>
                 <Route path="/login" component={Login}/>
-                <Route path="/signup">
-                <Signup/>
-                </Route>
+                <Route path="/signup" component={Signup}/>
               </Switch>
             </Router>
 

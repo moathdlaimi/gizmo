@@ -25,8 +25,8 @@ class Home extends React.Component {
       <div>
         <div className="tools-container">
         {this.state.tools.map(
-          (tool) => {
-            return <div className="tool">
+          (tool,index) => {
+            return <div className="tool" key={index}>
             <img className="tool-img" src={tool.img} alt="tool-pic"/>
             <div className="tool-info">
             <Link to="/Tool" value={tool.id}><h1> {tool.title}</h1></Link >

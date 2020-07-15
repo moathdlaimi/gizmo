@@ -1,14 +1,30 @@
 import React from 'react'
+import axios from "axios";
 import '../App.css'
 import {Link} from 'react-router-dom'
 
 
 class Navigataion extends React.Component {
+  state = {
+    username:''
+  }
+
+  componentDidMount = () => {
+      axios.get('/sessions').then(
+        (response) => {
+          this.setState({
+            username: response.data.username
+          })
+        }
+      )
+
+
+  }
   render () {
-    const {loggedIn} = this.props
+
     return (
       <>
-      { loggedIn === '' ?
+      { this.state.username === '' ?
       <nav className="nav-bar">
 
         <Link to="/" className="nav-links">Home </Link >
