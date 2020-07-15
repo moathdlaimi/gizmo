@@ -1,5 +1,6 @@
 <?php
 
+
 $dbconn = pg_connect("host=localhost dbname=gizmo");
 
     class Tool {
@@ -9,14 +10,16 @@ $dbconn = pg_connect("host=localhost dbname=gizmo");
       public $description;
       public $price;
       public $tags;
+      public $rentee;
 
-      public function __construct($id, $title, $img, $description, $price, $tags) {
+      public function __construct($id, $title, $img, $description, $price, $tags,$rentee) {
         $this->id = $id;
         $this->title = $title;
         $this->img = $img;
         $this->description = $description;
         $this->price = $price;
         $this->tags = $tags;
+        $this->rentee = $rentee;
       }
     }
 
@@ -35,19 +38,25 @@ $dbconn = pg_connect("host=localhost dbname=gizmo");
             $row_object->description,
             $row_object->price,
             $row_object->tags,
+            $row_object->rentee,
           );
           $tools[] = $new_tool;
           $row_object = pg_fetch_object($results);
         }
         return $tools;
       }
+    //to show each user with thier own tools
+      static function allFromUser($username){
+        $results = pg_query("SELECT * FROM tools WHERE ");
+      }
+
       //
       // CREATE
       //
       //
       static function create($tool){
-        $query = "INSERT INTO tools (title, img, description, price, tags) VALUES ($1, $2, $3, $4, $5)";
-        $query_params = array($tool->title, $tool->img, $tool->description, $tool->price, $tool->tags);
+        $query = "INSERT INTO tools (title, img, description, price, tags, rentee) VALUES ($1, $2, $3, $4, $5, $6)";
+        $query_params = array($tool->title, $tool->img, $tool->description, $tool->price, $tool->tags, $tool->rentee);
         pg_query_params($query, $query_params);
         return self::all();
       }

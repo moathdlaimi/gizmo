@@ -2,7 +2,9 @@ Header always set Access-Control-Allow-Origin "*"
 Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
 Header always set Access-Control-Allow-Headers "Content-Type"
 
+
 RewriteEngine On
+
 
 RewriteCond %{REQUEST_METHOD} ^GET$
 RewriteRule ^tools$ controllers/tools.php?action=index
@@ -26,3 +28,11 @@ RewriteRule ^users$ controllers/users.php?action=index
 
 RewriteCond %{REQUEST_METHOD} ^POST$
 RewriteRule ^users$ controllers/users.php?action=post
+
+# ======= Sessions =======
+
+RewriteCond %{REQUEST_METHOD} ^POST$
+RewriteRule ^sessions$ controllers/sessions.php?action=post
+
+RewriteCond %{REQUEST_METHOD} ^DELETE$
+RewriteRule ^sessions$ controllers/sessions.php?action=delete

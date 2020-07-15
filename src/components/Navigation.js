@@ -2,8 +2,11 @@ import React from 'react'
 import '../App.css'
 import {Link} from 'react-router-dom'
 
+
 class Navigataion extends React.Component {
   render () {
+
+
     return (
       <nav className="nav-bar">
         <Link to="/" className="nav-links">Home </Link >

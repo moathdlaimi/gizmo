@@ -34,6 +34,19 @@ class Users {
     }
     return $users;
   }
+
+  static function get($user){
+    $query = "SELECT * FROM users WHERE name = $1 AND password = $2";
+    $query_params = array($user->name, $user->password);
+    $results = pg_query_params($query, $query_params);
+    $row_object = pg_fetch_object($results);
+    if($row_object){
+      return $row_object->name;
+    }else {
+      return '';
+    }
+
+  }
   //
   // CREATE
   //

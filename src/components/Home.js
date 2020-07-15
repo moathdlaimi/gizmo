@@ -1,20 +1,35 @@
 import React from 'react'
+import axios from "axios";
 import '../css/Home.css'
-import Tool from './Tool.js'
-import Profile from './Profile.js'
+import {Link} from 'react-router-dom'
 
 class Home extends React.Component {
+  state = {
+    tools:[]
+  }
+
+  componentDidMount = () => {
+      axios.get('/tools').then(
+        (response) => {
+          this.setState({
+              tools:response.data
+          })
+        }
+      )
+    }
+
+
   render () {
-    const {tools} = this.props
+
     return (
       <div>
         <div className="tools-container">
-        {tools.map(
+        {this.state.tools.map(
           (tool) => {
             return <div className="tool">
-            <img className="tool-img" src={tool.img}/>
+            <img className="tool-img" src={tool.img} alt="tool-pic"/>
             <div className="tool-info">
-            <h1><a href="./Profile">{tool.title}</a></h1>
+            <Link to="/Tool" value={tool.id}><h1> {tool.title}</h1></Link >
             <h4>Price/Day ${tool.price}</h4>
             </div>
             </div>

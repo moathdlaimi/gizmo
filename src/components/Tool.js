@@ -1,27 +1,34 @@
 import React from 'react'
-import Profile from './Profile.js'
+import axios from "axios";
 
 class Tool extends React.Component {
   state = {
-    show:false
+    tools:[]
   }
 
-  toggleShow = () => {
-    this.setState({
-        show:!this.state.show
-    })
-  }
+  componentDidMount = (event) => {
+
+      axios.get('/tools/' + event.target.value).then(
+        (response) => {
+          this.setState({
+              tools:response.data
+          })
+        }
+      )
+    }
 
   render () {
-    const {tool,index,deleteTool,updateTool,updateTitle,updateImg,updateDescription,updatePrice,updateTag} = this.props
-    console.log(tool);
     return (
 
       <div>
-        <h3>This is the Tool Component</h3>
-        <h3>{tool.title}</h3>
-        <button onClick={this.toggleShow}>Edit Tool</button>
-        <button value={tool} onClick={deleteTool}>Delete Tool</button>
+      {
+        this.state.tools.map(
+          (tool) => {
+          return (
+            <h1>{tool.title}</h1>
+          )
+        })
+      }
       </div>
 
     )

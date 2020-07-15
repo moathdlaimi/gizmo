@@ -5,16 +5,7 @@ class Signup extends React.Component {
   state = {
     users:[]
   }
-  componentDidMount = () => {
-      axios.get('/users').then(
-        (response) => {
-          this.setState({
-              users:response.data
-          })
-        }
-      )
-  }
-
+  
   createUser = (event) => {
     event.preventDefault();
     axios.post(
@@ -51,6 +42,7 @@ class Signup extends React.Component {
     return (
     <div>
       <h3>Signup</h3>
+
       <div>
         <form onSubmit={this.createUser}>
           <input onKeyUp={this.createName} type="text" placeholder="Username" required/><br/>
