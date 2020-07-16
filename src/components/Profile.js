@@ -164,19 +164,23 @@ updateTag = (event) => {
     render () {
 
       return (
-        <div>
+        <div className="profile-page">
         <Navigation />
-        <h1>Your Tools</h1>
-        <button onClick={this.logout}>Log Out</button>
+        <div className="profile-btns-div">
+        <h2>Your Tools</h2>
+        <button className="add-logout-btns" onClick={this.toggleShowNew}>Add new Tool</button>
+        <button className="add-logout-btns" onClick={this.logout}>Log Out</button>
+        </div>
+        <div className="user-tool-list">
         {
           this.state.tools.map(
           (tool,index) => {
             return (
               <div className="profile-tool">
-              <img className="tool-img" src={tool.img} key={index} alt="tool-pic"/>
+              <img className="profile-tool-img" src={tool.img} key={index} alt="tool-pic"/>
               <h1>{tool.title}</h1>
-              <button onClick={this.toggleShowEdit}>Edit Tool</button>
-              <button value={tool.id} onClick={this.deleteTool}>Delete Tool</button>
+              <button className="profile-tools-btns" onClick={this.toggleShowEdit}>Edit Tool</button>
+              <button className="profile-tools-btns" value={tool.id} onClick={this.deleteTool}>Delete Tool</button>
               { this.state.showEdit ?
               <div>
                 <form id={tool.id} onSubmit={this.updateTool}>
@@ -193,8 +197,7 @@ updateTag = (event) => {
 
         })
       }
-        <br/>
-        <button onClick={this.toggleShowNew}>Add new Tool</button>
+
         { this.state.showNew ?
         <div className="create-form-div">
           <form className="create-form" onSubmit={this.createTool}>
@@ -206,6 +209,7 @@ updateTag = (event) => {
             <input className="create-submit" type="submit" value="Post New Tool"/>
           </form>
         </div> : null}
+        </div>
         </div>
       )
     }

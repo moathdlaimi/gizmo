@@ -21,6 +21,7 @@ class Signup extends React.Component {
         this.setState({
           users:response.data
         })
+        this.props.history.push('/profile');
       }
     )
 

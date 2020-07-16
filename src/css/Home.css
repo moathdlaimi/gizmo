@@ -60,7 +60,7 @@ a:hover{
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 665px) {
   .tools-container{
     display: grid;
     text-align:center;
@@ -70,7 +70,7 @@ a:hover{
   }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 850px) {
+@media only screen and (min-width: 665px) and (max-width: 999px) {
   .tools-container{
     display: grid;
     text-align:center;
