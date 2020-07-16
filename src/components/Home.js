@@ -19,13 +19,19 @@ class Home extends React.Component {
       )
     }
 
+  handleSearch = (event) => {
+    console.log('Searching');
+  }
+
 
   render () {
 
     return (
       <div>
       <Navigation />
+      <input type="text" id="mySearch" onKeyUp={this.handleSearch} placeholder="Search for a tool"/>
         <div className="tools-container">
+
         {this.state.tools.map(
           (tool,index) => {
             return <div className="tool" key={index}>

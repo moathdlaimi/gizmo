@@ -1,6 +1,6 @@
 .tools-container{
-  border-top: 3px solid black;
-  border-radius: 15px;
+  border-top: 10px solid black;
+  border-radius: 5px;
   width: 90%;
   margin: 50px auto;
   padding-top: 25px;
@@ -9,6 +9,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 15px;
+}
+#mySearch{
+    display: flex;
+    width: 60%;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .tool{
