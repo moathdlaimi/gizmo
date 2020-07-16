@@ -47,9 +47,9 @@ $dbconn = pg_connect("host=localhost dbname=gizmo");
       }
 
     //to show each user with thier own tools
-      static function allFromUser($username){
+      static function user($username){
         $user_tools = array();
-        $results = pg_query("SELECT * FROM tools JOIN users ON tools.rentee = users.name");
+        $results = pg_query("SELECT * FROM tools JOIN users ON tools.rentee = $username");
 
         $row_object = pg_fetch_object($results);
         while($row_object){
@@ -67,6 +67,7 @@ $dbconn = pg_connect("host=localhost dbname=gizmo");
         }
         return $user_tools;
       }
+
       //Show Page
         static function show($id){
 

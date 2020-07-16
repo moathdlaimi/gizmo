@@ -10,6 +10,9 @@ RewriteCond %{REQUEST_METHOD} ^GET$
 RewriteRule ^tools$ controllers/tools.php?action=index
 
 RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteRule ^tools/user$ controllers/tools.php?action=show
+
+RewriteCond %{REQUEST_METHOD} ^GET$
 RewriteRule ^tools/([0-9]+)$ controllers/tools.php?action=show&id=$1
 
 RewriteCond %{REQUEST_METHOD} ^POST$

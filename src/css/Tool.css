@@ -1,0 +1,59 @@
+.show-main-container{
+
+}
+
+.show-container{
+  border-bottom: 1px solid black;
+  margin: 50px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  line-height: 35px;
+}
+
+hr {
+  width: 90%;
+  margin: 5px 0;
+}
+
+.show-tool-img{
+  width: 80%;
+}
+
+#rent-label{
+  font-size: 1.2em;
+}
+
+#rent-date-input{
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  text-align:center;
+  font-size: 1.2em;
+
+}
+
+#rent-btn{
+  margin-top: 50px;
+  padding: 15px 20px;
+  float: right;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+#rent-btn:hover{
+  background-color: silver;
+  font-size: 1.3em;
+}
+
+
+@media only screen and (max-width: 665px) {
+  .show-container{
+    border-bottom: 1px solid black;
+    margin: 25px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    line-height: 25px;
+  }
+}

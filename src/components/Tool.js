@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from "axios";
+import '../css/Tool.css'
 import Navigation from '../components/Navigation.js'
 
 class Tool extends React.Component {
@@ -25,15 +26,25 @@ class Tool extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="show-main-container">
         <Navigation />
+        <div className="show-container">
         <div>
-        <img src={this.state.img}/>
+        <img className="show-tool-img" src={this.state.img}/>
+        </div>
+        <div>
         <h1>{this.state.title}</h1>
-        <h2>description: {this.state.description}</h2>
-        <h2>Price per day: ${this.state.price}</h2>
-        <h2>Posted by: {this.state.rentee}</h2>
-        <button>Rent Now</button>
+        <h3>Posted by: {this.state.rentee}</h3>
+        <hr/>
+        <h3>Price per day: ${this.state.price}</h3>
+        <h3>Available Today for pickup in San Francisco</h3>
+        <form>
+          <label id="rent-label">
+            Select a Date : <input id="rent-date-input" type="date" name="rent-date"/>
+            </label>
+          </form>
+        <button id="rent-btn">Rent Now</button>
+        </div>
         </div>
       </div>
     )

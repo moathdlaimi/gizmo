@@ -18,7 +18,6 @@ elseif ($_REQUEST['action'] === 'delete') {
   session_destroy();
   echo json_encode('Logged Out');
 } elseif ($_REQUEST['action'] === 'index') {
-
   echo json_encode($_SESSION['user']);
 }
 

@@ -13,10 +13,11 @@
 #mySearch{
     display: flex;
     width: 60%;
-    height: 30px;
+    height: 35px;
     border-radius: 10px;
     text-align: center;
     margin: 20px auto;
+    font-size: 1.2em;
 }
 
 .tool{

@@ -31,8 +31,7 @@ elseif ($_REQUEST['action'] === 'show') {
   echo json_encode($show_tool);
 }
 elseif ($_REQUEST['action'] === 'user') {
-
-  echo json_encode($all_tools);
+echo json_encode(Tools::user());
 }
 
 
