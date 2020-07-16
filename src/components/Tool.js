@@ -57,7 +57,7 @@ class Tool extends React.Component {
         <li>{this.state.description}</li></p>
         </div>
         </div>
-        : <div class="modal">Processing Renting is on the Future work <br/> <input type="button" id="post-rent-btn" onClick={this.rent} value="GOT IT"/></div>
+        : <div class="modal">Under Construction<br/> <input type="button" id="post-rent-btn" onClick={this.rent} value="GOT IT"/></div>
       }
       </div>
     )
