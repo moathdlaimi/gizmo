@@ -45,6 +45,7 @@ $dbconn = pg_connect("host=localhost dbname=gizmo");
         }
         return $tools;
       }
+
     //to show each user with thier own tools
       static function allFromUser($username){
         $user_tools = array();
@@ -66,6 +67,31 @@ $dbconn = pg_connect("host=localhost dbname=gizmo");
         }
         return $user_tools;
       }
+      //Show Page
+        static function show($id){
+
+          $query = "SELECT * FROM tools WHERE id =$1";
+          $query_params = array($id);
+          $results = pg_query_params($query, $query_params);
+          $tools = '';
+
+
+          $row_object = pg_fetch_object($results);
+          while($row_object){
+            $new_tool = new Tool(
+              intval($row_object->id),
+              $row_object->title,
+              $row_object->img,
+              $row_object->description,
+              $row_object->price,
+              $row_object->tags,
+              $row_object->rentee,
+            );
+            $tools = $new_tool;
+            $row_object = pg_fetch_object($results);
+          }
+          return $tools;
+        }
 
       //
       // CREATE

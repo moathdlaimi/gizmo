@@ -26,6 +26,14 @@ elseif ($_REQUEST['action'] === 'delete') {
   $all_tools = Tools::delete($_REQUEST['id']);
   echo json_encode($all_tools);
 }
+elseif ($_REQUEST['action'] === 'show') {
+  $show_tool = Tools::show($_REQUEST['id']);
+  echo json_encode($show_tool);
+}
+elseif ($_REQUEST['action'] === 'user') {
+
+  echo json_encode($all_tools);
+}
 
 
 

@@ -12,7 +12,7 @@ class Navigataion extends React.Component {
   componentDidMount = () => {
       axios.get('/sessions').then(
         (response) => {
-          console.log(response.data);
+          console.log('current user is ',response.data);
           this.setState({
             user: response.data
           })
