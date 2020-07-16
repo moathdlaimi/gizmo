@@ -11,6 +11,7 @@ import Login from './components/Login'
 import Signup from './components/Signup.js'
 import Navigation from './components/Navigation.js'
 import Tool from './components/Tool.js'
+import logo from './css/img/logo.png'
 
 // =============================
 // COMPONENT CLASS
@@ -22,7 +23,7 @@ class App extends React.Component {
         return (
 
             <div className="container">
-            <h1 className="app-name">Gizmo</h1>
+            <img src={logo} />
             <Router>
               <Switch>
                 <Route path="/" exact component={Home}/>

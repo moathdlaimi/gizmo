@@ -63,6 +63,27 @@ a:hover{
   border-radius: 10px;
 }
 
+.footer{
+  display: flex;
+  height: 100px;
+  border-top: 1px solid black;
+  line-height: 25px;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+.socialmedia-symbols {
+  width: 22px;
+  height: 22px;
+
+}
+
+.logo-symbol{
+  margin-top: 5px;
+  height: 70px;
+  width: 150px;
+  
+}
 @media only screen and (max-width: 665px) {
   .tools-container{
     display: grid;

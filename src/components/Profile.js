@@ -171,6 +171,17 @@ updateTag = (event) => {
         <button className="add-logout-btns" onClick={this.toggleShowNew}>Add new Tool</button>
         <button className="add-logout-btns" onClick={this.logout}>Log Out</button>
         </div>
+        { this.state.showNew ?
+        <div className="create-form-div">
+          <form className="create-form" onSubmit={this.createTool}>
+            <input className="create-input" onKeyUp={this.createTitle} type="text" placeholder="Title" required/><br/>
+            <input className="create-input" onKeyUp={this.createImg} type="text" placeholder="ImageURL" required/><br/>
+            <input className="create-input"onKeyUp={this.createDes} type="text" placeholder="Description" required/><br/>
+            <input className="create-input" onKeyUp={this.createPrice} type="text" placeholder="Price" required/><br/>
+            <input className="create-input" onKeyUp={this.createTags} type="text" placeholder="Tags" required/><br/>
+            <input className="create-submit" type="submit" value="Post New Tool"/>
+          </form>
+        </div> : null}
         <div className="user-tool-list">
         {
           this.state.tools.map(
@@ -198,17 +209,7 @@ updateTag = (event) => {
         })
       }
 
-        { this.state.showNew ?
-        <div className="create-form-div">
-          <form className="create-form" onSubmit={this.createTool}>
-            <input className="create-input" onKeyUp={this.createTitle} type="text" placeholder="Title" required/><br/>
-            <input className="create-input" onKeyUp={this.createImg} type="text" placeholder="ImageURL" required/><br/>
-            <input className="create-input"onKeyUp={this.createDes} type="text" placeholder="Description" required/><br/>
-            <input className="create-input" onKeyUp={this.createPrice} type="text" placeholder="Price" required/><br/>
-            <input className="create-input" onKeyUp={this.createTags} type="text" placeholder="Tags" required/><br/>
-            <input className="create-submit" type="submit" value="Post New Tool"/>
-          </form>
-        </div> : null}
+
         </div>
         </div>
       )
