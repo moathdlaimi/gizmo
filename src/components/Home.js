@@ -1,8 +1,11 @@
 import React from 'react'
 import axios from "axios";
 import '../css/Home.css'
+import githubsymbol from '../css/img/github.png'
+import linkedinsymbol from '../css/img/linkedin.png'
 import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation.js'
+
 
 
 class Home extends React.Component {
@@ -29,6 +32,7 @@ class Home extends React.Component {
 
     return (
       <div>
+
       <Navigation />
       <input type="text" id="mySearch" onKeyUp={this.handleSearch} placeholder="Search for a tool"/>
         <div className="tools-container">
@@ -47,7 +51,15 @@ class Home extends React.Component {
             </div>
         })}
         </div>
+        <div className="footer">
+          <p>&copy; 2020 Moath Dlaimi</p>
+          <div>
+          <a href="https://github.com/moathdlaimi?tab=repositories" target="_blank"><img className="socialmedia-symbols" src={githubsymbol} alt="tool-pic"/> </a>
+          <a href="https://www.linkedin.com/in/moathdlaimi/" target="_blank"><img className="socialmedia-symbols" src={linkedinsymbol} alt="tool-pic"/> </a>
+          </div>
+        </div>
       </div>
+
     )
   }
 }

@@ -29,14 +29,14 @@ class Navigataion extends React.Component {
       { this.state.user == null ?
       <nav className="nav-bar">
 
-        <Link to="/" className="nav-links">Home </Link >
-        <Link to="/login" className="nav-links">Login </Link >
+        <Link to="/" className="nav-links">Home | </Link >
+        <Link to="/login" className="nav-links">Login | </Link >
         <Link to="/signup" className="nav-links">Signup</Link >
 
       </nav>
       : <nav className="nav-bar">
 
-        <Link to="/" className="nav-links">Home </Link >
+        <Link to="/" className="nav-links">Home | </Link >
         <Link to="/profile" className="nav-links">Profile </Link >
 
       </nav> }
