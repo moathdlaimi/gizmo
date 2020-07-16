@@ -31,8 +31,11 @@ class Home extends React.Component {
             return <div className="tool" key={index}>
             <img className="tool-img" src={tool.img} alt="tool-pic"/>
             <div className="tool-info">
-            <Link to={"/Tool/"+tool.id} ><h1> {tool.title}</h1></Link >
+            <h2>{tool.title}</h2>
+            <h4>Posted By: {tool.rentee}</h4>
             <h4>Price/Day ${tool.price}</h4>
+            <h4>Available Today</h4>
+            <Link to={"/Tool/"+tool.id}><button className="details-btn">View Details</button></Link >
             </div>
             </div>
         })}

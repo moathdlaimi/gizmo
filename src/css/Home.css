@@ -13,6 +13,9 @@
 
 .tool{
   transition: 1s;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+
 }
 .tool:hover{
   transition: 1s;
@@ -25,7 +28,13 @@
 }
 
 .tool-info{
-
+  height: 150px;
+  padding: 5px;
+  text-align: left;
+  box-shadow:
+      inset 0 -3em 3em rgba(0,0,0,0.1),
+            0 0  0 2px rgb(255,255,255,0),
+            0.3em 0.3em 1em rgba(0,0,0,0.2);
 }
 
 a{
@@ -34,6 +43,13 @@ a{
 }
 a:hover{
   color: green;
+}
+
+.details-btn{
+  margin-top: 20px;
+  width: 120px;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 650px) {
