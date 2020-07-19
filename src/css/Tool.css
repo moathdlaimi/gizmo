@@ -77,5 +77,6 @@ hr {
   padding: 10px 15px;
   border-radius: 8px;
   font-size: 1em;
-  background-color: green;
+  background-color: black;
+  color: white;
 }
