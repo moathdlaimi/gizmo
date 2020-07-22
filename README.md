@@ -1,68 +1,54 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Gizmo
+Live Site: https://gizmo-frontend.herokuapp.com/
+## MVP
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- HTML5
 
-### `npm test`
+- CSS3
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Javascript
 
-### `npm run build`
+- Raect
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- PHP 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Postman
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Approach
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Unsolved Problems
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Users can upload a profile image instead of using a url
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- User can update user name and password
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Lessons Learned
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The smallest part of the project was coding, while working in a group and planning was the foundation of our assignment
 
-### Code Splitting
+- Learned the importance of planning and having working design files before we started the project
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- The importance of having a leader to make the hard calls for the benefit of the group and make sure everyone isn't going too far off with ideas.
 
-### Analyzing the Bundle Size
+- Time commitments is important for tackling a group assignment.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- It's important to to remember that when in a group you always have someone to lean on.
 
-### Making a Progressive Web App
+- It's good to be in a group where you can learn stuff from other people and absorb their knowledge.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Wireframes
 
-### Advanced Configuration
+![wireframe]()
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+![wireframe2]()
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
